@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>gui/img/bnb</file>
+        <file>gui/img/logo.png</file>
+    </qresource>
+</RCC>

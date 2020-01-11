@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BnBs>
+    <BnB type="SharedRoom">
+        <NBeds>30</NBeds>
+        <PricePerBed>20</PricePerBed>
+        <BaseInfo>
+            <Id>{e47a22fd-99b0-42cd-a781-deac6900c14b}</Id>
+            <Name>Court B&amp;B</Name>
+            <City>Padova</City>
+            <Address>Via Verdi 2</Address>
+            <Description>Check-in entro le ore 20:00
+Chech-out entro le ore 11:00</Description>
+            <Services>
+                <Service>0</Service>
+                <Service>5</Service>
+            </Services>
+        </BaseInfo>
+    </BnB>
+    <BnB type="PrivateRoom">
+        <Rooms>
+            <Room>
+                <NBeds>3</NBeds>
+                <Price>70</Price>
+                <Quantity>1</Quantity>
+            </Room>
+            <Room>
+                <NBeds>2</NBeds>
+                <Price>50</Price>
+                <Quantity>2</Quantity>
+            </Room>
+        </Rooms>
+        <BaseInfo>
+            <Id>{243850de-a648-4cbf-ac0f-4ce4bc28bc2f}</Id>
+            <Name>Dream B&amp;B</Name>
+            <City>Roma</City>
+            <Address>Via Rossi</Address>
+            <Description></Description>
+            <Services>
+                <Service>0</Service>
+            </Services>
+        </BaseInfo>
+    </BnB>
+</BnBs>
