@@ -8,7 +8,7 @@ INCLUDEPATH += .
 
 QT += widgets xml
 QMAKE_CXXFLAGS += -std=c++11
-
+CONFIG += c++11
 # Input
 HEADERS += maincontroller.h \
            model.h \
