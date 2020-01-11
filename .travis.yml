@@ -13,6 +13,6 @@ before_script:
   - sleep 3 # give xvfb some time to start
 
 script: 
-  - qmake -qt=qt5
+  - qmake Qonatiner.pro
   - make
   - ./qontainer
