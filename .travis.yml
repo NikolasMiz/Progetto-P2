@@ -19,4 +19,4 @@ deploy:
   provider: releases
   api_key: $GIT_TOKEN
   file: "Qontainer"
-  skip_cleanup: truE
+  skip_cleanup: true
