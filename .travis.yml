@@ -14,3 +14,11 @@ install:
 script:
   - /opt/qt55/bin/qmake PREFIX=/usr
   - make
+  
+deploy:
+  provider: releases
+  api_key: $GIT_TOKEN
+  file: "Qontainer"
+  skip_cleanup: true
+  on:
+    tags: true
