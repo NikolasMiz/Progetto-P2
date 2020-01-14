@@ -1,7 +1,6 @@
 language: cpp
 dist: trusty
 compiler: g++
-sudo: required
 
 before_install:
   - sudo add-apt-repository ppa:beineri/opt-qt551-trusty -y
