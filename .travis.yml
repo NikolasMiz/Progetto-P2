@@ -1,32 +1,24 @@
 language: cpp
 dist: trusty
 compiler: g++
-
 before_install:
-  - sudo add-apt-repository ppa:beineri/opt-qt551-trusty -y
-  - sudo apt-get update
-
+- sudo add-apt-repository ppa:beineri/opt-qt551-trusty -y
+- sudo apt-get update
 install:
-  - sudo apt-get install qt55base
-  - source /opt/qt55/bin/qt55-env.sh
-
-
-
+- sudo apt-get install qt55base
+- source /opt/qt55/bin/qt55-env.sh
 deploy:
   provider: releases
-  api_key: $GIT_TOKEN
-  file: "Qontainer"
+  api_key: "$GIT_TOKEN"
+  file: Qontainer
   skip_cleanup: true
-
-
 addons:
   sonarcloud:
-    organization: "nikolasmiz"
+    organization: nikolasmiz
     token:
-      secure: "k0gpfUkefplDaQ9y6JL8ughRno2sNC5xGIGE8EtksZDs/6JWiQMo56ZsdPQsctIZW/t2dtV5EtaRyIsQQ2N9eZCUwlpr1jbM52q0LW3fEnIuSW+nVHfaRn+x3tpy3PIPjdXcP959ozUXukKUFAY3SclN9zbHT+BqB8HF2Gdtt7M5gXWHCeyFm7T+JsRhQETLml2HH2ColENSn08yTLjwteTqp1V9ZnplGKhIqTTfyMA3rDRGRA0h8yw+oLjafLfPrvSAABVpv8h+h3fOeGD8DE9UwWKovluppFnGHQMlgyafW/tbKlunKBttebQWZlzE31WtxA2ZoasmBCjRlflMTEvLHjGCjeBcv8HjmMIzxi3XtH4NevU/OWj3sQlXwoAn5EIks48Ffrvh1xx+zbWriVxHoKdpPU8FTYzREAI2kb51Ou1oW4JLrtghM93B7/xo/Y+T00ivugyPwLODTyAZGMRqNWRNrJezt30gj7f0qFBlOTghvA1mi54AHHQXb5o7lA7DllQyprHKgCG0NBr3RvYeZ+zitXSY1Ii4b04HYORxrF1POjQowezQdu0aLK187WiZ5p/rMk0eCHejvaNo6AtmnUJXoT/f5BAUXOeu7Li6jlPxAefAsS36GxUpLumoF+uS/CUKaDFue4Wq0s3PoidkPdCKa+CQKq4p8aTaVwk="
+      secure: 043Q8+IEsYVxy/nA96BdGYbfiRj5pwUprnndOk1DShFyjEUEkK2SjN/H4pnNHlxQ9GG44mNOAswaMQQiaeGgk6dD7Ll2AzLIQVd/LBitoHK6zHQccx1XZt1gg9c6K+yxwZfdPhUQbOLubP7oLOFx66yPsP2FBTaz67d7l/7NugxIlUPkSK5VHrNY6l/k+FkWj4xRjdyahAexqYVe8gSn2aKC4XL5ZwFfg67Tgos4jNQ2MXRj524Zes9MEDPkSCq7WIE7g9lpWcNIzj2KMT6MT/ERgbzAJRlBSjZFIDHEdFrf/SPEickvjOxPxgapRlpthGwNdTZyUYWk9imImTvS0C3HT7gzC0fSq9PWxJjJDS1L0p6XWWU6fOFFcWlR9eEdn9yHcayEq1nf0l1NXDeks9hClOcISygpu13ZeN88nvNdIOhFU4YbRZ/ccyyDTNrjIkP6fBtok5ZP2XtN39vk00nQGeUEeCyOY1bqSJTgOyeIWG9CTSUMG2j1ACTfEx5b/vIWOb51ZoXcBiWRR3Gm/EyAP2lC6Ogh+b47Ti7B1bVGfo7NiTNGBkhaxH9nsD3lIWgGyPixxxeMnSbef+b5hpsbVPbCMid5aSSw4IB618AABneFhOUgv4JuGH3qTCPAyEbodQZExIJbCVnL/ejCSvRFMrbPqAUJMz3bszgNCpo=
 
 script:
-  - /opt/qt55/bin/qmake PREFIX=/usr
-  - build-wrapper-linux-x86-64 --out-dir bw-output make all
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - sonar-scanner
+- "/opt/qt55/bin/qmake PREFIX=/usr"
+- build-wrapper-linux-x86-64 --out-dir bw-output make all
+- sonar-scanner
