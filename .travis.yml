@@ -26,7 +26,6 @@ addons:
       secure: "k0gpfUkefplDaQ9y6JL8ughRno2sNC5xGIGE8EtksZDs/6JWiQMo56ZsdPQsctIZW/t2dtV5EtaRyIsQQ2N9eZCUwlpr1jbM52q0LW3fEnIuSW+nVHfaRn+x3tpy3PIPjdXcP959ozUXukKUFAY3SclN9zbHT+BqB8HF2Gdtt7M5gXWHCeyFm7T+JsRhQETLml2HH2ColENSn08yTLjwteTqp1V9ZnplGKhIqTTfyMA3rDRGRA0h8yw+oLjafLfPrvSAABVpv8h+h3fOeGD8DE9UwWKovluppFnGHQMlgyafW/tbKlunKBttebQWZlzE31WtxA2ZoasmBCjRlflMTEvLHjGCjeBcv8HjmMIzxi3XtH4NevU/OWj3sQlXwoAn5EIks48Ffrvh1xx+zbWriVxHoKdpPU8FTYzREAI2kb51Ou1oW4JLrtghM93B7/xo/Y+T00ivugyPwLODTyAZGMRqNWRNrJezt30gj7f0qFBlOTghvA1mi54AHHQXb5o7lA7DllQyprHKgCG0NBr3RvYeZ+zitXSY1Ii4b04HYORxrF1POjQowezQdu0aLK187WiZ5p/rMk0eCHejvaNo6AtmnUJXoT/f5BAUXOeu7Li6jlPxAefAsS36GxUpLumoF+uS/CUKaDFue4Wq0s3PoidkPdCKa+CQKq4p8aTaVwk="
 
 script:
-  - make clean
   - /opt/qt55/bin/qmake PREFIX=/usr
   - build-wrapper-linux-x86-64 --out-dir bw-output make all
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
