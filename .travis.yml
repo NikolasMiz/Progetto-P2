@@ -12,13 +12,7 @@ deploy:
   api_key: "$GIT_TOKEN"
   file: Qontainer
   skip_cleanup: true
-addons:
-  sonarcloud:
-    organization: nikolasmiz
-    token:
-      secure: 043Q8+IEsYVxy/nA96BdGYbfiRj5pwUprnndOk1DShFyjEUEkK2SjN/H4pnNHlxQ9GG44mNOAswaMQQiaeGgk6dD7Ll2AzLIQVd/LBitoHK6zHQccx1XZt1gg9c6K+yxwZfdPhUQbOLubP7oLOFx66yPsP2FBTaz67d7l/7NugxIlUPkSK5VHrNY6l/k+FkWj4xRjdyahAexqYVe8gSn2aKC4XL5ZwFfg67Tgos4jNQ2MXRj524Zes9MEDPkSCq7WIE7g9lpWcNIzj2KMT6MT/ERgbzAJRlBSjZFIDHEdFrf/SPEickvjOxPxgapRlpthGwNdTZyUYWk9imImTvS0C3HT7gzC0fSq9PWxJjJDS1L0p6XWWU6fOFFcWlR9eEdn9yHcayEq1nf0l1NXDeks9hClOcISygpu13ZeN88nvNdIOhFU4YbRZ/ccyyDTNrjIkP6fBtok5ZP2XtN39vk00nQGeUEeCyOY1bqSJTgOyeIWG9CTSUMG2j1ACTfEx5b/vIWOb51ZoXcBiWRR3Gm/EyAP2lC6Ogh+b47Ti7B1bVGfo7NiTNGBkhaxH9nsD3lIWgGyPixxxeMnSbef+b5hpsbVPbCMid5aSSw4IB618AABneFhOUgv4JuGH3qTCPAyEbodQZExIJbCVnL/ejCSvRFMrbPqAUJMz3bszgNCpo=
 
 script:
 - "/opt/qt55/bin/qmake PREFIX=/usr"
-- build-wrapper-linux-x86-64 --out-dir bw-output make all
-- sonar-scanner
+- make all
